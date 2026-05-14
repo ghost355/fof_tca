@@ -8,7 +8,7 @@ public protocol Reducer {
     func reduce(
         state: inout State,
         action: Action,
-        enviroment: Environment
+        environment: Environment
     ) -> Effect<Action>
 }
 

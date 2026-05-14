@@ -1,6 +1,6 @@
-// GameEnviroment.swift
+// GameEnvironment.swift
 
-public struct GameEnviroment {
+public struct GameEnvironment {
     public var actionDeck: ActionDeck
     public init(actionDeck: ActionDeck) {
         self.actionDeck = actionDeck

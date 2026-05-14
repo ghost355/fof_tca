@@ -5,13 +5,18 @@ import PackageDescription
 let package = Package(
     name: "fof_tca",
     platforms: [
-        .macOS(.v13),
+        .macOS(.v13)
     ],
     products: [
         .library(
             name: "fof_tca",
             targets: ["AppEngine"]
         ),
+        .executable(
+            name: "AppCLI",
+            targets: [
+                "CLI"
+            ]),
     ],
     targets: [
         .target(
@@ -21,6 +26,10 @@ let package = Package(
         .target(
             name: "AppEngine",
             dependencies: ["AppCore"]
+        ),
+        .executableTarget(
+            name: "CLI",
+            dependencies: ["AppEngine"]
         ),
         .testTarget(
             name: "AppCoreTests",
